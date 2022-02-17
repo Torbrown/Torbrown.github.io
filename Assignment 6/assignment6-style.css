@@ -1,11 +1,35 @@
 @import url("https://use.typekit.net/yco1zqh.css");
 
+.navigation{
+  align-items:flex-start;
+  flex-wrap: nowrap;
+  background-color: green;
+}
+
+.navigation a{
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+body{
+  background-color: black;
+}
 h1{
+  color: white;
   font-family: all-round-gothic, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
+a{
+  color: lightgray;
+  font-family: all-round-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 p{
+  color:white;
   font-family: all-round-gothic, sans-serif;
   font-weight: 400;
   font-style: normal;

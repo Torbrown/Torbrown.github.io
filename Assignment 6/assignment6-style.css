@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
 .image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  background-image:url(BGimg/mainIMG.jpeg);
+  padding: 200px 100px;
+  margin: 0;
+  background-repeat:no-repeat;
+  background-size: cover;
 }
+.image h1{
+  color: #F2E529;
+  text-align: left;
+  font-size: 500%;
+}
+.bottomright {
+  position: absolute;
+  top: 175px;
+  right: 10px;
+}
+
 *{
   margin:0;
   padding: 0;
@@ -20,6 +34,9 @@
   text-decoration: none;
   font-size: 17px;
   text-transform: uppercase;
+}
+.navigation .active {
+  color:#F2E529;
 }
 hr {
   margin-left: auto;
@@ -46,6 +63,7 @@ a:hover {
   color: #F2E529;
   text-decoration: line-through;
 }
+
 p{
   color: white;
   font-family: 'Pragati Narrow', sans-serif;

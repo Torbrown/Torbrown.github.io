@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
 .image {
-  background-image:url(BGimg/mainIMG.jpeg);
+  background-image:url(/img/mainIMG.jpeg);
   padding: 200px 100px;
   margin: 0;
   background-repeat:no-repeat;

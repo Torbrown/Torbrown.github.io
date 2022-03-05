@@ -3,24 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>Assignment 8</title>
-        <link rel="stylesheet" href="CSS/portfolioStyles.css">
+        <link rel="stylesheet" href="CSS/styles.css">
   </head>
   <body>
-    <div class="navigation">
-      <a class="active" href="#home">Home</a>
-      <a href="placeholder">Contact</a>
-      <a href="placeholder">projects</a>
+    <div class="container">
+      <div class="navbar">
+        <nav>
+          <ul id="menuList">
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="placeholder">contact</a></li>
+            <li><a href="placeholder">projects</a></li>
+            <li><a href="placeholder">resume</a></li>
+          </ul>
+        </nav>
+        <img src="img/menuicon.png" class="icon" onclick="toggel">
+      </div>
     </div>
-    <div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>
-  <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>
-  <div class="grid-item">7</div>
-  <div class="grid-item">8</div>
-  <div class="grid-item">9</div>
-</div>
+    <!-- gird layout -->
+    <div class="flexbox-container">
+      <div class="flexbox-item flexbox-item-1"></div>
+      <div class="flexbox-item flexbox-item-2">
+        <h1> Tor Erik</h1>
+        <p> I grew up in Eagle CO, my major is ENVD with an emphasis in architecture. I am also a CTD minor and a Buisness minor.</p>
+      </div>
+    </div>
+    <script>
+
+      var menuList = document.getElementByID("menuList");
+
+      menuList.style.maxHeight = "0px";
+
+      function toggel(){
+        if(menuList.style.maxHeight == "0px")
+          {
+            menuList.style.maxHeight = "130px";
+          }
+        else
+          {
+            menuList.style.maxHeight = "0px";
+          }
+      }
+    </script>
+
   </body>
 </html>

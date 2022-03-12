@@ -74,9 +74,26 @@ body{
   margin-top: 3rem;
 
 }
+/* this is how I keep everything in the middle */
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 80%;
+  max-width: 1250px;
+  padding: 0;
+  background-color: green;
+  height: auto;
+}
+/* image-container */
 .flexbox-item{
   margin: 10px;
-  /* background-image:url(/img/headshot.png); */
+}
+.description{
+  justify-content: center;
+  align-items: center;
+
 }
 .flexbox-item-1{
   flex-shrink: 0;
@@ -93,12 +110,14 @@ body{
 }
 /* Project page responsive image grid */
 .row{
-  margin: auto;
-  padding: 5rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-gap: 1rem;
-  max-width: 1250px;
+  /* max-width: 1250px; */
 }
 }
 /* annimation */
@@ -112,11 +131,9 @@ body{
 }
 .tiles .tile {
   display: block;
-  margin: 10px;
   text-align: left;
   opacity: .99;
   overflow: hidden;
-  /* position: relative; */
   border-radius: 3px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
   background-color: red;
@@ -211,13 +228,15 @@ body{
   }
 }
 @media only screen and (max-width: 700px){
+  .content{
+    width:95%;
+  }
   .row{
-    margin: auto;
-    padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, minmax(200px, 0fr));
     grid-gap: 1rem;
-    max-width: 500px;
+    width:100%;
+    /* max-width: 500px; */
   }
   .tiles .tile .details span{
     top: 0px;

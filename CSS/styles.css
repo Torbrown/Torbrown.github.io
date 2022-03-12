@@ -14,6 +14,7 @@ body{
   margin: 0;
   padding: 0;
 }
+
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -77,14 +78,15 @@ body{
 /* this is how I keep everything in the middle */
 .content{
   position: absolute;
-  top: 50%;
+  top: 350px;
   left: 50%;
   transform:translate(-50%, -50%);
-  width: 80%;
+  min-width: 80%;
   max-width: 1250px;
   padding: 0;
   background-color: green;
-  height: auto;
+
+
 }
 /* image-container */
 .flexbox-item{
@@ -117,16 +119,12 @@ body{
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-gap: 1rem;
-  /* max-width: 1250px; */
-}
 }
 /* annimation */
 .tiles {
   font-size: 0;
   text-align: center;
   position: relative;
-  top: 50%;
-  left: 50%;
   background: black;
 }
 .tiles .tile {
@@ -136,7 +134,7 @@ body{
   overflow: hidden;
   border-radius: 3px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
-  background-color: red;
+  background-color: black;
   width: 100%;
   padding-top: 100%; /* 1:1 Aspect Ratio */
   position: relative;
@@ -223,20 +221,21 @@ body{
     min-height:225px;
   }
   .flexbox-item-2{
-      flex-shrink: 3;
+    flex-shrink: 3;
     width:500px;
   }
 }
 @media only screen and (max-width: 700px){
   .content{
     width:95%;
+    top:90%;
   }
   .row{
     display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 0fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(1, minmax(90%, 1fr));
     width:100%;
-    /* max-width: 500px; */
+
+
   }
   .tiles .tile .details span{
     top: 0px;

@@ -129,7 +129,7 @@ body{
   font-size: 0;
   text-align: center;
   position: relative;
-  background: black;
+  /* background: black; */
 }
 .tiles .tile {
   display: block;
@@ -137,8 +137,7 @@ body{
   opacity: .99;
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
-  background-color: black;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08);
   width: 100%;
   padding-top: 100%; /* 1:1 Aspect Ratio */
   position: relative;
@@ -218,7 +217,16 @@ body{
 .tiles .tile:hover .info {
           transition-delay: 0.25s;
 }
+/* Resume Page */
+.resume img{
+  width:100%;
+}
 
+/* contact page */
+.logos{
+  width: 100%;
+  margin-right: 80%;
+}
 
 @media only screen and (max-width: 1900px){
   .flexbox-item-1{
@@ -230,7 +238,12 @@ body{
     width:500px;
   }
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 400px){
+  .logos{
+    width: 100%;
+    margin: auto;
+  }
+
   .content{
     width:95%;
     top:90%;
@@ -239,8 +252,6 @@ body{
     display: grid;
     grid-template-columns: repeat(1, minmax(90%, 1fr));
     width:100%;
-
-
   }
   .tiles .tile .details span{
     top: 0px;
@@ -298,6 +309,6 @@ body{
     align-items: center;
   }
   .flexbox-item-2{
-    flex-shrink: 3;
+    width: 350px;
   }
 }

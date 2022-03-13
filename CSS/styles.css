@@ -75,27 +75,19 @@ body{
   margin-top: 3rem;
 
 }
-/* this is how I keep everything in the middle */
-.content{
-  position: absolute;
-  top: 350px;
-  left: 50%;
-  transform:translate(-50%, -50%);
-  min-width: 80%;
-  max-width: 1250px;
-  padding: 0;
-  background-color: green;
-
-
-}
 /* image-container */
 .flexbox-item{
-  margin: 10px;
+  margin:20px;
 }
 .description{
   justify-content: center;
   align-items: center;
+}
+.description h2{
 
+}
+.description p{
+  font-size: 16px;
 }
 .flexbox-item-1{
   flex-shrink: 0;
@@ -109,6 +101,18 @@ body{
   width:400px;
   /* min-height:200px; */
   flex-shrink: 0;
+}
+/* this is how I keep everything in the middle */
+.content{
+  top:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin-top: 20px;
+  margin: auto;
+  padding: 25px;
+  max-width: 1250px;
 }
 /* Project page responsive image grid */
 .row{
@@ -164,6 +168,7 @@ body{
   bottom: 0;
 }
 .tiles .tile .details {
+  font-family: 'Pragati Narrow', sans-serif;
   font-size: 16px;
   padding: 20px;
   color: #fff;
@@ -184,12 +189,12 @@ body{
 .tiles .tile .details .title {
   line-height: 1;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 .tiles .tile .details .info {
   line-height: 1.2;
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .tiles .tile:focus:before,
 .tiles .tile:focus span,

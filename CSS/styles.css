@@ -318,11 +318,8 @@ body{
   margin-left:50px;
 }
 
-.colorBtn{
-  width: 100px;
-  background-color: #D9CC1E;
-  position: relative;
-  text-align: center;
-  align-items: center;
-
+#colorBtn{
+  Height: 200px;
+  width: 200px;
+  background:#D9CC1E;
 }

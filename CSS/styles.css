@@ -323,3 +323,94 @@ body{
   width: 200px;
   background:#D9CC1E;
 }
+
+/* Random Quote Generator */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.app {
+  position: absolute;
+  top:30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  background-color: #0D0D0D;
+}
+
+header {
+  width: 100%;
+  font-size: 35px;
+  text-align: center;
+  padding: 10px;
+  color: #D9CC1E;
+}
+
+.quotes {
+  color: white;
+  padding: 20px 50px;
+  min-height: 200px;
+}
+
+.quote-text {
+  color: white;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.quote-author{
+  font-size: 25px;
+}
+
+.quote-series{
+  font-size: 20px;
+}
+
+
+.controls {
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.button {
+  display: block;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.new-quote {
+  background-color: #D9CC1E;
+  margin-bottom: 15px;
+}
+
+.new-quote:hover {
+  background-color: #BFB417;
+}
+
+.new-quote:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    width: 100%;
+  }
+  .quote-text {
+    font-size: 18px;
+  }
+}

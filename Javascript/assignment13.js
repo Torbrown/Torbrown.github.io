@@ -16,35 +16,38 @@ randomize.addEventListener('click', result);
 
 function result() {
   // create a new variable newStory = storyText
-  let newStory = storytext;
+  let newStory = storyText;
   //create xItem, yItem, zItem
-  let xItem = randomValueFromArray(:insertx:);
-  let yItem = randomValueFromArray(:inserty:);
-  let zItem = randomValueFromArray(:insertz:);
+  let xItem = randomValueFromArray(insertX);
+  let yItem = randomValueFromArray(insertY);
+  let zItem = randomValueFromArray(insertZ);
   // let xItem = randomValueFromArray(insertX);
   // replace :insertx: :insrty: :insertz:
-  newStory = newStory.replace(/insertX/g,xItem);
-  newStory = newStory.replace(/insertY/g,yItem);
-  newStory = newStory.replace(/insertZ/g,zItem);
+  newStory = newStory.replace(/:insertx:/g,xItem);
+  newStory = newStory.replace(/:inserty:/g,yItem);
+  newStory = newStory.replace(/:insertz:/g,zItem);
 
   if(customName.value !== '') {
     const name = customName.value;
-    
-    newStory =newStory.replace(/bob/g,name)
+
+    newStory =newStory.replace(/Bob/g,name)
     // Step 4 - find bob replace name
   }
 
   if(document.getElementById("uk").checked) {
     // replace "300" in line 32 with conversion formula
-    const weight = Math.round(300);
+    const weight = Math.round(300/14)+' stone';
     // turn weight into string
     // add string and ' stone' together
 
 
-    const temperature =  Math.round(94);
+
+    const temperature =  Math.round((94-32)*(5/9))+ ' centigrade';
     //convert fahrenheit to centigrade
 
     // replace values in string with temp and weight var
+    newStory = newStory.replace(/300 pounds/g,weight);
+    newStory = newStory.replace(/94 fahrenheit/g,temperature);
   }
 
   story.textContent = newStory;

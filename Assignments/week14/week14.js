@@ -71,3 +71,5 @@ for (var i = 0; i < companyInfo.employees.length; i++){
   }
   console.log("Problem Six: ",companyInfo.employees[i].name,companyInfo['employees'][i]['wfh'])
 }
+
+//not uploading properly

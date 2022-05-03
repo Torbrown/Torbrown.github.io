@@ -7,72 +7,85 @@
   box-sizing: border-box;
   font-family: 'Pragati Narrow', sans-serif;
 }
-p {
-  font-size: 16px;
-}
+
 body{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
   margin: 0;
   padding: 0;
+  background: #D9D9D9;
+  font-size: 120%;
 }
 
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0D0D0D;
-  color: white;
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    color: white;
 }
-.navlinks .activeLink{
-  color: #D9CC1E;
+
+
+.navlinks {
+    height: 100%;
 }
+
+.navlinks ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 1.5em
+}
+
+.navlinks li {
+    list-style: none;
+}
+
+.navlinks li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navlinks li:hover {
+    background-color: #8C8C8C;
+}
+
+.toggle {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
 .portfolio-title{
   font-weight: 700;
-  font-size: 1.5rem;
-  margin: .6rem;
+  font-size: 160%;
+  padding-left: 1.5em;
 }
-.navlinks ul{
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.navlinks ul li{
-  list-style: none;
-}
-.navlinks li a{
-  text-decoration: none;
-  padding: 1rem;
-  display: block;
-  color: white;
-}
-.toggel{
-  width: 30px;
-  height: 20px;
-  position: absolute;
-  top: .8rem;
-  right: 1rem;
-  flex-direction: column;
-  justify-content: space-between;
-  display: none;
-}
-.toggel .bar{
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
 
-}
-.navlinks li:hover {
-  background-color: #D9CC1E;
-}
-.navbar li a:hover {
-  color: #0D0D0D;
-}
+
 .flexbox-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+
 
 }
 /* image-container */
@@ -87,19 +100,25 @@ body{
 
 }
 .description p{
-  font-size: 16px;
+  font-size: 120%;
 }
-.flexbox-item-1{
+.flexbox-item-1 img{
   flex-shrink: 0;
   width:200px;
   min-height:200px;
-  border: 2px solid #0D0D0D;
   text-align: center;
-  padding: 1rem;
+
+  display: block;
+  max-height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  margin: auto;
+  bottom: 0;
 }
 .flexbox-item-2{
   width:400px;
-  /* min-height:200px; */
+
   flex-shrink: 0;
 }
 /* this is how I keep everything in the middle */
@@ -238,12 +257,11 @@ body{
     width:500px;
   }
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 800px){
   .logos{
     width: 100%;
     margin: auto;
   }
-
   .content{
     width:95%;
     top:90%;
@@ -274,34 +292,6 @@ body{
   .tiles .tile img {
     max-height: 100%
   }
-
-  .toggel{
-    display: flex;
-  }
-  .navlinks .activeLink{
-    color: white;
-  }
-  .navlinks{
-    /* display: none; */
-    width:100%;
-  }
-  .navbar{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navlinks ul{
-    width:100%;
-    flex-direction: column;
-  }
-  .navlinks li {
-    text-align: center;
-  }
-  .navlinks li a{
-    padding: .5rem 1rem;
-  }
-  .navlinks.active{
-    display: inline;
-  }
   .flexbox-container{
     display: flex;
     flex-direction: column;
@@ -311,6 +301,39 @@ body{
   .flexbox-item-2{
     width: 350px;
   }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle {
+        display: flex;
+    }
+
+    .navlinks {
+        display: none;
+        width: 100%;
+    }
+
+    .navlinks ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navlinks ul li {
+        text-align: center;
+    }
+
+    .navlinks ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
 }
 /* Below is custom CSS for Assignment 11 */
 
@@ -346,12 +369,12 @@ html {
   background-color: #0D0D0D;
 }
 
-header {
+/* header {
   width: 100%;
   font-size: 35px;
   text-align: center;
   padding: 10px;
-  color: #D9CC1E;
+  color: #D9CC1E; */
 }
 
 .quotes {

@@ -1,5 +1,6 @@
 // This was built using the guidance of a tutorial to begin with. The author and link is here : https://www.youtube.com/watch?v=WZNG8UomjSI
-let timeHour = 0
+let index= 0;
+let storedData= {};
 let weather = {
   apiKey: "63bbedb8af2bfba44c2d347968939b1a",
   fetchWeather: function (city) {
@@ -16,13 +17,13 @@ let weather = {
         }
         return response.json();
       })
-      .then((data) => this.displayWeather(data));
+      .then((data) => {this.displayWeather(data); storedData=data });
   },
-  displayWeather: function (data) {
+  displayWeather: function (data, index=0) {
     const { name } = data.city;
     console.log(name)
-    const { icon, description } = data.list[0].weather[0];
-    const { temp, temp_min, temp_max } = data.list[0].main;
+    const { icon, description } = data.list[index].weather[0];
+    const { temp, temp_min, temp_max } = data.list[index].main;
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(".icon").src =
       "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -39,8 +40,6 @@ let weather = {
   },
 };
 
-
-
 document.querySelector(".search button").addEventListener("click", function () {
   weather.search();
 });
@@ -54,3 +53,11 @@ document
   });
 
 weather.fetchWeather("Boulder");
+
+
+const buttons= document.querySelectorAll(".day-btn button");
+buttons.forEach((button)=> {
+  button.addEventListener("click", (e)=> {
+     weather.displayWeather(storedData, button.id)
+  })
+})

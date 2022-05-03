@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/cs2?family=Pragati+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
 *{
-  font-family: 'Pragati', sans-serif;
+  font-family: 'Pragati narrow', sans-serif;
   box-sizing: border-box;
 }
 
@@ -79,7 +80,8 @@ body {
 }
 
 .display {
-margin: auto;
+  font-style: 'Pragati';
+  margin: auto;
   background: #0D0D0D;
   color: white;
   padding: 1.5em;
@@ -87,7 +89,7 @@ margin: auto;
   width: 100%;
   max-width: 420px;
   height: 100%;
-  max-height: 420px;
+  max-height: 480px;
 
 }
 
